@@ -1,6 +1,6 @@
-# cicd-pipeline-python
+# cicd-pipeline-python-cd
 
-Calculadora web en Flask con pipeline de Integración Continua (Entregable 2 – Integración y Entrega Continua, EAFIT).
+Calculadora web en Flask con pipeline de CI/CD que despliega en AWS ECS (Staging y Producción) con Terraform (Entregable 3 – Integración y Entrega Continua, EAFIT).
 
 ## Integrantes
 
