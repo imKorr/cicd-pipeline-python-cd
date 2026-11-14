@@ -18,6 +18,12 @@ def browser():
     options.add_argument("--headless")  # Ejecuta sin interfaz gráfica
     options.add_argument("--no-sandbox")  # Necesario para algunos entornos
     options.add_argument("--disable-dev-shm-usage")  # Necesario para algunos entornos
+    # El ALB solo sirve HTTP. Chrome intenta forzar HTTPS en dominios públicos y,
+    # al no lograrlo, muestra una página vacía; se desactiva esa actualización automática.
+    options.add_argument(
+        "--disable-features=HttpsUpgrades,HttpsFirstBalancedModeAutoEnable,"
+        "HttpsFirstModeV2ForEngagedSites"
+    )
     driver = webdriver.Chrome(options=options)
 
     # Opción 2: Firefox (headless)
